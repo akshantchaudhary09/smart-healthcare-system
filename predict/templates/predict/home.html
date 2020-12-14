@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+    {% load static %}
+    <head>
+        <link rel="shortcut icon" href="{% static 'predict/images/cardiogram.png' %}" type="image/x-icon">
+		<title>Disease Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'predict/assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="{% url 'index' %}">Smart healthcare system</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>Fill the details</h2>
+					</header>
+
+
+
+
+                    <form  action="{% url 'prediction' %}">
+                          <fieldset style="border-width:20px;border-color:red">
+                              <legend>Personal details</legend>
+                              Name: <input type="text" name="name"><br>
+                              Age: <input type="text" name="age"><br>
+                              Gender: <select name="gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                      </select>
+                              <br>
+                              Height(in cm): <input type="number" name="height"><br><br>
+                              Weight(in kg): <input type="number" name="weight"><br><br>
+                          </fieldset>
+                            <br><br>
+                          <fieldset>
+                              <legend>Symptoms</legend>
+                              Symptom1: <select name="symptom1">
+                                          {% for elem in drop_down %}
+                                          <option value={{ elem }}>{{ elem }}</option>
+                                          {% endfor %}
+                                        </select>
+                              <br>
+                              Symptom2: <select name="symptom2">
+                                          {% for elem in drop_down %}
+                                          <option value={{ elem }}>{{ elem }}</option>
+                                          {% endfor %}
+                                        </select>
+                              <br>
+                              Symptom3: <select name="symptom3">
+                                          {% for elem in drop_down %}
+                                          <option value={{ elem }}>{{ elem }}</option>
+                                          {% endfor %}
+                                        </select>
+                              <br>
+                              Symptom4: <select name="symptom4">
+                                          {% for elem in drop_down %}
+                                          <option value={{ elem }}>{{ elem }}</option>
+                                          {% endfor %}
+                                        </select>
+                              <br>
+                              Symptom5: <select name="symptom5">
+                                          {% for elem in drop_down %}
+                                          <option value={{ elem }}>{{ elem }}</option>
+                                          {% endfor %}
+                                        </select>
+                              <br>
+                          </fieldset>
+                          <input type="submit" value="Submit">
+                    </form>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'predict/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/util.js' %}"></script>
+			<script src="{% static 'predict/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
+
+
+
+
+

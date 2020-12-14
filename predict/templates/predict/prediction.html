@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	{% load static %}
+	<head>
+		<link rel="shortcut icon" href="{% static 'predict/images/cardiogram.png' %}" type="image/x-icon">
+		<title>Disease Predicted</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'predict/assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="{% url 'index' %}">Smart healthcare system</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'index' %}">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>Predicted disease</h2>
+					</header>
+
+                        <h3>{{ navie }}</h3>
+
+                        <a href="{% url 'report' %}">Generate report</a>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'predict/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/util.js' %}"></script>
+			<script src="{% static 'predict/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

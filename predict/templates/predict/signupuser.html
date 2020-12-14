@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	{% load static %}
+	<head>
+		<link rel="shortcut icon" href="{% static 'predict/images/cardiogram.png' %}" type="image/x-icon">
+		<title>Login/Signup</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'predict/assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				{% if user.is_authenticated %}
+					<h1>Logged in as {{ user.username }}</h1>
+					<form action="{% url 'logoutuser' %}" method="POST">
+							{% csrf_token %}
+							<div class="3u 6u$(small) 12u$(xsmall)">
+									<ul class="actions vertical small">
+										<li><button type="submit" class="button special small" >Logout</button></li>
+									</ul>
+							</div>
+					</form>
+				{% else %}
+					<h1><strong><a href="{% url 'index' %}">Smart healthcare system</a></strong></h1>
+				{% endif %}
+				<nav id="nav">
+					<ul>
+						{% if user.is_authenticated %}
+
+						{% else %}
+							<li><a href="{% url 'signupuser' %}">SignUp</a></li>
+							<li><a href="{% url 'loginuser' %}">Login</a></li>
+						{% endif %}
+						<li><a href="{% url 'index' %}">Home</a></li>
+<!--						<li><a href="generic.html">Report</a></li>-->
+						<li><a href="elements.html">Checkup</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2 color="white">Sign Up</h2>
+						<p>Get yourself registered</p>
+					</header>
+
+				<div class="container">
+					{{ error }}
+					<form method="POST">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<div class="3u 6u$(small) 12u$(xsmall)">
+									<ul class="actions vertical small">
+										<li><button type="submit" class="button special small">Signup</button></li>
+									</ul>
+						</div>
+					</form>
+				</div>
+					
+
+		<!-- Scripts -->
+			<script src="{% static 'predict/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'predict/assets/js/util.js' %}"></script>
+			<script src="{% static 'predict/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
