@@ -6,6 +6,7 @@
 		<title>Disease Predicted</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="{% static 'predict/assets/css/main.css' %}" />
 	</head>
 	<body>
@@ -26,13 +27,14 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 
-					<header class="major special">
-						<h2>Predicted disease</h2>
-					</header>
+<!--					<header class="major special">-->
+<!--						<h2>Predicted disease</h2>-->
+<!--					</header>-->
+					<div class="alert alert-danger" role="alert">
+						<h3 style="padding-left:30%;padding-top:10px;">Predicted disease: {{ navie }}</h3>
+					</div>
+					<a style="margin-left:41%;" type="button" class="button special small" href="{% url 'report' %}">Generate report</a>
 
-                        <h3>{{ navie }}</h3>
-
-                        <a href="{% url 'report' %}">Generate report</a>
 				</div>
 			</section>
 

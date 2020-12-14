@@ -108,9 +108,9 @@ def prediction(request):
     from sklearn.metrics import accuracy_score
 
     # Training data
-    path_train = "C:/Users/Mayan/Desktop/new/disease_prediction-project/predict/templates/predict/Training.csv"
+    path_train = "C:/Users/91875/Desktop/django-projects/disease_prediction-project/predict/templates/predict/Training.csv"
     data_training = pd.read_csv(path_train)
-    path_test = "C:/Users/Mayan/Desktop/new/disease_prediction-project/predict/templates/predict/Testing.csv"
+    path_test = "C:/Users/91875/Desktop/django-projects/disease_prediction-project/predict/templates/predict/Testing.csv"
     data_testing = pd.read_csv(path_test)
 
     x_train = data_training.values[:, 0:131]
@@ -284,7 +284,7 @@ def prediction(request):
     symptoms.append("Symptom5: " + symptom5)
 
     final_output.append("Predicted disease: " + predicted_disease)
-    final_output.append("Consult to a: " + consultdoctor)
+    final_output.append("Consult to: " + consultdoctor)
 
     return render(request, "predict/prediction.html",
                   {'decision':output_decision, 'random':output_random,

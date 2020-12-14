@@ -26,62 +26,73 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 
-					<header class="major special">
-						<h2>Fill the details</h2>
-					</header>
+
+                    <h2 class="major special">Fill the details</h2>
+				    <hr>
 
 
 
 
                     <form  action="{% url 'prediction' %}">
+
                           <fieldset style="border-width:20px;border-color:red">
-                              <legend>Personal details</legend>
-                              Name: <input type="text" name="name"><br>
-                              Age: <input type="text" name="age"><br>
-                              Gender: <select name="gender">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
-                                      </select>
+                              <h2>Personal details</h2>
+                              <input type="text" name="name" placeholder="Name"><br>
+                              <input type="text" name="age" placeholder="Age"><br>
+                              <select name="gender">
+                                <option value="">Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                              </select>
                               <br>
-                              Height(in cm): <input type="number" name="height"><br><br>
-                              Weight(in kg): <input type="number" name="weight"><br><br>
+                              <input type="number" name="height" placeholder="Height(in cm)"><br><br>
+                              <input type="number" name="weight" placeholder="Weight(in kg)"><br><br>
                           </fieldset>
-                            <br><br>
+                            <hr>
                           <fieldset>
-                              <legend>Symptoms</legend>
-                              Symptom1: <select name="symptom1">
-                                          {% for elem in drop_down %}
-                                          <option value={{ elem }}>{{ elem }}</option>
-                                          {% endfor %}
-                                        </select>
+                              <h2>Symptoms</h2>
+                                <select name="symptom1">
+                                    <option value="">Enter a symptom</option>
+                                  {% for elem in drop_down %}
+                                  <option value={{ elem }}>{{ elem }}</option>
+                                  {% endfor %}
+                                </select>
                               <br>
-                              Symptom2: <select name="symptom2">
-                                          {% for elem in drop_down %}
-                                          <option value={{ elem }}>{{ elem }}</option>
-                                          {% endfor %}
-                                        </select>
+                                <select name="symptom2">
+                                    <option value="">Enter a symptom</option>
+                                  {% for elem in drop_down %}
+                                  <option value={{ elem }}>{{ elem }}</option>
+                                  {% endfor %}
+                                </select>
                               <br>
-                              Symptom3: <select name="symptom3">
-                                          {% for elem in drop_down %}
-                                          <option value={{ elem }}>{{ elem }}</option>
-                                          {% endfor %}
-                                        </select>
+                                <select name="symptom3">
+                                    <option value="">Enter a symptom</option>
+                                  {% for elem in drop_down %}
+                                  <option value={{ elem }}>{{ elem }}</option>
+                                  {% endfor %}
+                                </select>
                               <br>
-                              Symptom4: <select name="symptom4">
-                                          {% for elem in drop_down %}
-                                          <option value={{ elem }}>{{ elem }}</option>
-                                          {% endfor %}
-                                        </select>
+                                <select name="symptom4">
+                                    <option value="">Enter a symptom</option>
+                                  {% for elem in drop_down %}
+                                  <option value={{ elem }}>{{ elem }}</option>
+                                  {% endfor %}
+                                </select>
                               <br>
-                              Symptom5: <select name="symptom5">
-                                          {% for elem in drop_down %}
-                                          <option value={{ elem }}>{{ elem }}</option>
-                                          {% endfor %}
-                                        </select>
+                                <select name="symptom5">
+                                    <option value="">Enter a symptom</option>
+                                  {% for elem in drop_down %}
+                                  <option value={{ elem }}>{{ elem }}</option>
+                                  {% endfor %}
+                                </select>
                               <br>
                           </fieldset>
-                          <input type="submit" value="Submit">
+                          <div class="3u 6u$(small) 12u$(xsmall)">
+									<ul class="actions vertical small">
+										<li><button type="submit" class="button special small" >Submit</button></li>
+									</ul>
+							</div>
                     </form>
 
 				</div>

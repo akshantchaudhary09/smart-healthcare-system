@@ -26,27 +26,27 @@
 			<section id="main" class="wrapper">
 				<div class="container">
 
-                    <h1>Report</h1>
-					<header class="major special">
-						<h3>Personal details</h3>
-					</header>
+					<h2 class="major special">Report</h2>
+
+					<hr>
+					<h3 class="major special">Personal details</h3>
+
 					<fieldset>
                     {% for detail in details %}
-                    <p>{{ detail }}</p>
+                    <h4>{{ detail }}</h4>
                     {% endfor %}
 					</fieldset>
-                    <header class="major special">
-						<h3>symptoms</h3>
-					</header>
-                    {% for symptom in symptoms %}
-                    <p>{{ symptom }}</p>
-                    {% endfor %}
+					<hr>
+					<h3 class="major special">symptoms</h3>
 
-                    <header class="major special">
-						<h3>Predicted Disease</h3>
-					</header>
+                    {% for symptom in symptoms %}
+                    <h4>{{ symptom }}</h4>
+                    {% endfor %}
+					<hr>
+					<h3 class="major special">Predicted Disease</h3>
+
                     {% for output in outputs %}
-                    <p>{{ output }}</p>
+                    <h4>{{ output }}</h4>
                     {% endfor %}
 
 				</div>

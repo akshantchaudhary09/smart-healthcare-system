@@ -3169,7 +3169,7 @@
 /* Main */
 
 	#main {
-		padding-top: 4em;
+		padding: 4em 0 15em 0;
 		background-image:  url("../../images/bg_signup.jpg");
 	}
 
