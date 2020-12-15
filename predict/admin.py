@@ -3,10 +3,7 @@ from .models import Report
 # Register your models here.
 
 
-class ReportAdmin(admin.ModelAdmin):
-    readonly_fields = ('name',)
-
-admin.site.register(Report, ReportAdmin)
+admin.site.register(Report)
 # class TodoAdmin(admin.ModelAdmin):
 #     readonly_fields = ('created',)
 #

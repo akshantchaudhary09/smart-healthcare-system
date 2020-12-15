@@ -14,7 +14,7 @@
 		<!-- Header -->
 			<header id="header" class="alt">
 				{% if user.is_authenticated %}
-					<h1>Logged in as {{ user.username }}</h1>
+					<h1>Welcome {{ user.username }}</h1>
 					<form action="{% url 'logoutuser' %}" method="POST">
 							{% csrf_token %}
 							<div class="3u 6u$(small) 12u$(xsmall)">
@@ -107,33 +107,33 @@
 						</header>
 						<div class="feature-grid">
 							<div class="feature">
-								<div class="image rounded"><img src="{% static 'predict/images/pic04.jpg' %}" alt="" /></div>
+								<div class="image rounded"><img src="{% static 'predict/images/mayank.jpeg' %}" alt="" /></div>
 								<div class="content">
 									<header>
 										<h4>Mayank Joshi</h4>
 <!--										<p>Lorem ipsum dolor sit</p>-->
 									</header>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
+									<p>Worked on the machine learning algorithm in the backend and also contributed in the front end. </p>
 								</div>
 							</div>
 							<div class="feature">
-								<div class="image rounded"><img src="{% static 'predict/images/pic05.jpg' %}" alt="" /></div>
+								<div class="image rounded"><img src="{% static 'predict/images/Akshant (3).jpeg' %}" alt="" /></div>
 								<div class="content">
 									<header>
 										<h4>Akshant Chaudhary</h4>
 <!--										<p>Ratione maiores a, commodi</p>-->
 									</header>
-									<p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
+									<p>Worked on the django framework and played a major role on the development of the websites.</p>
 								</div>
 							</div>
 							<div class="feature">
-								<div class="image rounded"><img src="{% static 'predict/images/pic06.jpg' %}" alt="" /></div>
+								<div class="image rounded"><img src="{% static 'predict/images/nishant.jpeg' %}" alt="" /></div>
 								<div class="content">
 									<header>
 										<h4>Nishant Kumar</h4>
 <!--										<p>Possimus ex reprehenderit eaque</p>-->
 									</header>
-									<p>Maiores iusto inventore fugit architecto est iste expedita commodi sed, quasi feugiat nam neque mollitia vitae omnis, ea natus facere.</p>
+									<p>Worked on the documentaion and management of the project.Also played a part in ML algorithms in backend.</p>
 								</div>
 							</div>
 
